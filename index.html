@@ -8,12 +8,24 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
-    <div id='scoreBox'>0</div>
+    <div>Target Score: 
+        <div id='scoreTarget'></div>
+    </div>
+    <div>Your Score: 
+        <div id='scoreBox'>0</div>
+    </div>
+    
+    <div>
+        <button class='crystalButton' id='button1'>Crystal1</button>
+        <button class='crystalButton' id='button2'>Crystal2</button>
+        <button class='crystalButton' id='button3'>Crystal3</button>
+        <button class='crystalButton' id='button4'>Crystal4</button>
+    </div>
 
-    <button class='crystalButton' id='button1'>Crystal1</button>
-    <button class='crystalButton' id='button2'>Crystal2</button>
-    <button class='crystalButton' id='button3'>Crystal3</button>
-    <button class='crystalButton' id='button4'>Crystal4</button>
+    <h2>Wins</h2>
+        <div id='wins'></div>
+    <h2>Losses</h2>
+        <div id='losses'></div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
     <script src="assets/javascript/game.js"></script>
