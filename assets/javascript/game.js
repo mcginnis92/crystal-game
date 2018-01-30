@@ -25,17 +25,12 @@ function startGame (){
         console.log(buttonValues);
     }
         $('#button1').attr('value', buttonValues[0]);
-        $('#button1').text(buttonValues[0]);
 
         $('#button2').attr('value', buttonValues[1]);
-        $('#button2').text(buttonValues[1]);
 
         $('#button3').attr('value', buttonValues[2]);
-        $('#button3').text(buttonValues[2]);
 
-        $('#button4').attr('value', buttonValues[3]);
-        $('#button4').text(buttonValues[3]);
-        
+        $('#button4').attr('value', buttonValues[3]);        
 }
 
 
