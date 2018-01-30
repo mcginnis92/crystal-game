@@ -10,18 +10,20 @@ function startGame (){
     currentScore = 0;
     $('#scoreBox').text(currentScore);
 
+    $('.alert').addClass('modal');
+
     $('#wins').text(winCounter);
     $('#losses').text(lossCounter);
 
-    //Generate random target score between 50-150.
-    targetScore = Math.floor(Math.random() * (150 - 50 + 1) ) + 50;
+    //Generate random target score between 19-120.
+    targetScore = Math.floor(Math.random() * (120 - 19 + 1) ) + 19;
       console.log("target score is", targetScore);
       $('#scoreTarget').text(targetScore);
 
-    //Fill array with 4 random numbers between 1-20.
+    //Fill array with 4 random numbers between 1-12.
     var buttonValues = [];
     for (var i = 0; i < 4; i++) {
-        buttonValues.push(Math.round(Math.random() * 20))
+        buttonValues.push(Math.round(Math.random() * 12))
         console.log(buttonValues);
     }
         $('#button1').attr('value', buttonValues[0]);
@@ -32,8 +34,6 @@ function startGame (){
 
         $('#button4').attr('value', buttonValues[3]);        
 }
-
-
 startGame();
 
 //Play Game Function
@@ -44,21 +44,35 @@ var playGame = function(){
 
     //check if currentScore = targetScore
     if (currentScore === targetScore){
-        alert('you win!');
+        $('#scoreBox').text(currentScore) //this isn't updating before alert displays
         winCounter++;
         $('#wins').text(winCounter);
-        startGame();
-    }
-    else if(currentScore < targetScore){
-        //play again
+        
+        //trigger the modal to show "you win"
+        $('.modal').removeClass('modal');
+        $('#winloss').text('You Win!');
+
+        // startGame();
+        
     }
     else if(currentScore > targetScore){
-        alert('Whoops! Your score exceeded the target. Try again!')
+        $('#scoreBox').text(currentScore); //this isn't updating before alert displays
         lossCounter++;
         $('#losses').text(lossCounter);
-        startGame();
+        
+        //trigger the modal to show "you lose"
+        $('.modal').removeClass('modal');
+        $('#winloss').text('Whoops! Your Score Exceeded the Target.');
+
+        // startGame();
+    }
+    else {
+        //play again
     }
 }
 
 //Set up event listener for each button
 $('.crystalButton').on('click', playGame);
+
+//Set up event listener to restart game once the modal button is clicked 
+$('.btn-success').on('click', startGame);

@@ -29,6 +29,10 @@ h3, h4 {
     color: #456973;
 }
 
+span {
+    color: #e95376;
+}
+
 .instructions {
     text-align: left;
 }
@@ -37,4 +41,14 @@ h3, h4 {
   padding-top: 19px;
   text-align: center;
   padding: 30px;
+  margin-bottom: 50px;
+}
+
+.modal{
+    visibility: hidden;
+}
+
+.btn-success {
+    padding: 20px;
+    border: none;
 }

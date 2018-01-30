@@ -26,14 +26,21 @@
                 <p>You will be given a random number at the start of the game. This is your target score.</p>
                 <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your score. You <strong>win</strong> the game by matching your total score to the target score. You <strong>lose</strong> the game if your score exceeds the target score.</p>
                 <p>The value of each crystal is hidden from you until you click on it, and then you can determine the value by seeing how many points were added to your total score.</p>
-                <p>Each time the game starts, your target score and the values of the crystals will change!</p>
+                <p>Each time the game starts, your target score and the values of the crystals will change! <span>Click any crystal to start the game.</span></p>
             </div>
         </div>
         <br>
 
+        <!--Hidden Modal-->
+        <div class="modal alert row text-center">
+            <h3 id="winloss"></h3>
+            <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Play Again</a>
+        </div>
+        <br>
+
         <!--Third Row-->
-        <div class="row">
-            <div class="col-md-6 box left">
+        <div class="row box">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Target Score: </h4>
@@ -48,7 +55,7 @@
                 </div>
             </div>
            
-            <div class="col-md-6 box right">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Wins: </h4>
@@ -92,7 +99,9 @@
     <!--Closing Div for the Body-->
     </div>
 
-    <nav class="navbar navbar-fixed-bottom">
+
+
+    <nav class="navbar">
        <p class="footer"> &copy Copyright 2018 | Molly Moran </p>
     </nav>
     
