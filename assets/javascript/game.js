@@ -50,21 +50,16 @@ var playGame = function(){
         
         //trigger the modal to show "you win"
         $('.modal').removeClass('modal');
-        $('#winloss').text('You Win!');
-
-        // startGame();
-        
+        $('#winloss').text('You Win!');        
     }
     else if(currentScore > targetScore){
-        $('#scoreBox').text(currentScore); //this isn't updating before alert displays
+        $('#scoreBox').text(currentScore);
         lossCounter++;
         $('#losses').text(lossCounter);
         
         //trigger the modal to show "you lose"
         $('.modal').removeClass('modal');
         $('#winloss').text('Whoops! Your Score Exceeded the Target.');
-
-        // startGame();
     }
     else {
         //play again
